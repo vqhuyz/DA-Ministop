@@ -17,7 +17,6 @@ namespace Ministop.Models
             ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         public int? LoaiSanPhamID { get; set; }

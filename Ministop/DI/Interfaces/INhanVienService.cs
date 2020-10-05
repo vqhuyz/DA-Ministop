@@ -16,6 +16,5 @@ namespace Ministop.DI.Interfaces
         bool CapNhat(NhanVienViewModel nhanVien);
         bool Xoa(int id);
         bool DoiMatKhau(int id, string matKhauCu, string matKhauMoi);
-        bool TaiKhoan(DangNhapViewModel dangNhap);
     }
 }

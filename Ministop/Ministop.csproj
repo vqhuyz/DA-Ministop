@@ -155,19 +155,23 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="DI\Implements\SanPhamService.cs" />
     <Compile Include="DI\Implements\KhachHangService.cs" />
     <Compile Include="DI\Implements\NhaCungCapService.cs" />
     <Compile Include="DI\Implements\NhanVienService.cs" />
     <Compile Include="DI\Interfaces\IKhachHangService.cs" />
     <Compile Include="DI\Interfaces\INhaCungCapService.cs" />
     <Compile Include="DI\Interfaces\INhanVienService.cs" />
+    <Compile Include="DI\Interfaces\ISanPhamService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ModelsView\DangNhapViewModel.cs" />
     <Compile Include="ModelsView\KhachHangViewModel.cs" />
+    <Compile Include="ModelsView\LoaiSanPhamViewModel.cs" />
     <Compile Include="ModelsView\NhaCungCapViewModel.cs" />
     <Compile Include="ModelsView\NhanVienViewModel.cs" />
+    <Compile Include="ModelsView\SanPhamViewModel.cs" />
     <Compile Include="Models\ChiTietDatHang.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\ChiTietPhieuNhap.cs" />
@@ -7922,6 +7926,7 @@
     <Content Include="Assets\AdminLTE-2.4.18\yarn.lock" />
     <Content Include="Img\200.gif" />
     <Content Include="Img\NhanVien\VuQuocHuy.jpg" />
+    <Content Include="Img\NhanVien\Vũ Quốc Huy - SU8.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -8039,7 +8044,10 @@
     <Content Include="Views\NhanVien\Index.cshtml" />
     <Content Include="Views\NhanVien\CapNhat.cshtml" />
     <Content Include="Views\NhanVien\ThongTin.cshtml" />
-    <Content Include="Views\NhanVien\TaiKhoan.cshtml" />
+    <Content Include="Views\SanPham\Index.cshtml" />
+    <Content Include="Views\SanPham\ThemMoi.cshtml" />
+    <Content Include="Views\SanPham\CapNhat.cshtml" />
+    <Content Include="Views\SanPham\LoaiSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

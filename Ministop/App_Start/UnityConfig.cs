@@ -19,6 +19,7 @@ namespace Ministop
             container.RegisterType<IKhachHangService, KhachHangService>();
             container.RegisterType<INhaCungCapService, NhaCungCapService>();
             container.RegisterType<INhanVienService, NhanVienService>();
+            container.RegisterType<ISanPhamService, SanPhamService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

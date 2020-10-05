@@ -131,11 +131,6 @@ namespace Ministop.DI.Implements
                 nhanVien.NgayCapNhat = DateTime.Now;
                 db.SaveChanges();
                 result = true;
-
-              //  var dangNhap = nhanVien.ID;
-                
-
-
             }
             return result;
         }
@@ -165,34 +160,6 @@ namespace Ministop.DI.Implements
                 }
             }
             return result;
-        }
-
-        public bool TaiKhoan(DangNhapViewModel dangNhap)
-        {
-            bool result = false;
-            using (var db = new MinistopDbContext())
-            {
-                var taiKhoan = db.DangNhaps.Find(dangNhap.NhanVienID);
-                using (var trans = db.Database.BeginTransaction())
-                {
-                    try
-                    {
-                        taiKhoan.TaiKhoan = dangNhap.TaiKhoan;
-                        taiKhoan.MatKhau = dangNhap.MatKhau;
-                        taiKhoan.PhanQuyenID = dangNhap.PhanQuyenID;
-                        taiKhoan.TinhTrang = true;
-                        db.DangNhaps.Add(taiKhoan);
-                        db.SaveChanges();
-                        trans.Commit();
-                        result = true;
-                    }
-                    catch(Exception)
-                    {
-                        trans.Rollback();
-                    }
-                }
-            }
-                return result;
         }
     }
 }

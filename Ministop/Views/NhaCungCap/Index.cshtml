@@ -82,9 +82,6 @@
                                             <a href="@Url.Action("CapNhat", new { id = item.ID })" class="btn btn-success">
                                                 <i class="fa fa-plus">2</i>
                                             </a>
-                                            <a href="@Url.Action("ChiTiet", new { id = item.ID })" class="btn btn-success">
-                                                <i class="fa fa-plus">4</i>
-                                            </a>
                                             @Ajax.ActionLink(" ", "Xoa", "NhaCungCap", new { id = item.ID }, new AjaxOptions
                                        {
                                            Confirm = "Bạn có chắc chắn muốn xóa nhà cung cấp này?",

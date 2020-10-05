@@ -38,9 +38,9 @@ namespace Ministop.Controllers
                 {
                     path = Path.Combine(Server.MapPath("~/Img/NhanVien/"), HinhAnh.FileName);
                     HinhAnh.SaveAs(path);
+                    bool result = nhanVien.ThemMoi(_nhanVien, HinhAnh.FileName);
                 }
             }
-            bool result = nhanVien.ThemMoi(_nhanVien, HinhAnh.FileName);
             return RedirectToAction("Index");
         }
 
@@ -57,7 +57,7 @@ namespace Ministop.Controllers
         }
 
         [HttpDelete]
-        public ActionResult Xoa(int id)
+        public JsonResult Xoa(int id)
         {
             bool result = nhanVien.Xoa(id);
             return Json(result, JsonRequestBehavior.AllowGet);
@@ -74,18 +74,6 @@ namespace Ministop.Controllers
             bool result = nhanVien.DoiMatKhau(id, matKhauCu, matKhauMoi);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-
-        public ActionResult TaiKhoan(int id)
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public JsonResult TaiKhoan(DangNhapViewModel _dangNhap)
-        {
-            bool result = nhanVien.TaiKhoan(_dangNhap);
-            return Json(result, JsonRequestBehavior.AllowGet);
-        }
-
+    
     }
 }
